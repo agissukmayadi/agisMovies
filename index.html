@@ -71,7 +71,7 @@
         btnSearch.addEventListener("click", function () {
             const keyword = inputKeyword.value
             $.ajax({
-                url: `http://www.omdbapi.com/?apikey=a12da282&s=${keyword}`,
+                url: `https://www.omdbapi.com/?apikey=a12da282&s=${keyword}`,
                 method: "GET", // optional, jika API membutuhkan method
                 beforeSend: () => {
                     btnSearch.toggleAttribute("disabled")
@@ -149,7 +149,7 @@
                                 const idMovie = this.dataset.imdbid
                                 const wraperModalResponse = document.querySelector("#wraperModalResponse")
                                 $.ajax({
-                                    url: `http://www.omdbapi.com/?apikey=a12da282&i=${idMovie}`,
+                                    url: `https://www.omdbapi.com/?apikey=a12da282&i=${idMovie}`,
                                     // method : "GET" / "POST"
                                     beforeSend: (response) => {
                                         wraperModalResponse.innerHTML = `
